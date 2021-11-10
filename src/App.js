@@ -1,12 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/layout/NavBar/NavBar';
+import { ItemListContainer } from './components/layout/ItemListContainer/ItemListContainer';
+import { NavBar } from './components/layout/NavBar/NavBar';
 
 function App() {
   return (
-    <div>
-      <NavBar/>
-      
-    </div>
+    <>
+      <NavBar />
+      <ItemListContainer greeting={ ["Bienvenida a tu tienda online", "¡Descubrí la temporada 2022!"]  } />
+     
+    </>
   );
 }
 
