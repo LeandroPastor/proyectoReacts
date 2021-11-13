@@ -1,15 +1,18 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
+import { ItemCount } from '../ItemCount/ItemCount'
 import './ItemListContainer.css'
 
 export const ItemListContainer = ( {greeting} ) => {
-   
+
+    const [a,b] = greeting
    
     return (
         <Container className="contenedor">
-            <h2>{greeting[0]}</h2>
+            <h2>{a}</h2>
             <hr/>
-            <p>{greeting[1]}</p>
+            <p>{b}</p>
+            <ItemCount />
         </Container>
     )
 }
