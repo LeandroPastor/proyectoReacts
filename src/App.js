@@ -6,8 +6,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting={ ["Bienvenida a tu tienda online", "¡Descubrí la temporada 2022!"]  } />
-      
+      <ItemListContainer />    
      
     </>
   );

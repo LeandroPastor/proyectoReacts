@@ -1,0 +1,58 @@
+export const products = [
+    {
+        id: 1,
+        price: 1800,
+        name: "Remera Símbolos",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 2,
+        price: 1950,
+        name: "Remerón Símbolos",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 3,
+        price: 2100,
+        name: "Remerón Amar",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 4,
+        price: 1700,
+        name: "Remera Bahía",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 5,
+        price: 1800,
+        name: "Remera Pink Floyd",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 5,
+        price: 1800,
+        name: "Remera Pink Floyd",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 5,
+        price: 1800,
+        name: "Remera Pink Floyd",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+    {
+        id: 5,
+        price: 1800,
+        name: "Remera Pink Floyd",
+        desc: "lorem ipsum",
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
+    },
+]
