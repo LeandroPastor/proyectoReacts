@@ -5,16 +5,17 @@ import './ItemList.css'
 
 export const ItemList = ({productos, greeting}) => {
     
-    const [a] = greeting
+    
 
 
     return (
 
         <Container className="contenedor">
-            <h2>{a}</h2>
-            
+            <h2>{greeting}</h2>
             <hr/>
-            <Row xs={1} md={4} className="g-4 centrado">
+
+
+            <Row xs={1} md="auto" className="g-4 centrado">
                 {productos.map ((prod) => <Item {...prod}/> )}
             </Row> 
             

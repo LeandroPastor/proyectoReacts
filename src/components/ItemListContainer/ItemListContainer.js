@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { pedirDatos } from '../helpers/pedirDatos'
+import { pedirDatos } from '../../helpers/pedirDatos'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { ItemList } from '../ItemList/ItemList'
 import './ItemListContainer.css'
@@ -34,7 +34,7 @@ export const ItemListContainer = () => {
             loading ? 
                 <h2>Cargando...</h2>
                 : <>
-                    <ItemList productos={productos} greeting={ ["Bienvenida a tu tienda online!!!"] } />
+                    <ItemList productos={productos} greeting="Bienvenida a tu tienda online!!!" />
                 </>
             }
             
