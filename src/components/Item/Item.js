@@ -6,8 +6,9 @@ import './Item.css'
 
 
 export const Item = ({id, img, name, desc, price}) => {
+   
+   
     return (
-        
         <article key={id}>
             <CardGroup>
             <Card className="centradoXs" style={{ width: '18rem' }}>
