@@ -1,17 +1,36 @@
 import React from 'react'
-import { Item } from '../Item/Item'
-import { Container, Row} from 'react-bootstrap'
+import { CardGroup, Card, Container, Row} from 'react-bootstrap'
+import "./ItemDetail.css"
 
 
 
 
 
-export const ItemDetail = ({producto}) => {
+export const ItemDetail = ({id, price, name, desc, img, marks, category}) => {
+    
+    
+    
     return (
-        <Container>
+        <Container className="contenedor">
             <Row xs={1} md="auto" className="g-4 centrado">
-                {producto.map ((prod) => <Item {...prod}/> )}
-            </Row> 
+                
+                    <CardGroup>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={img} alt={name} />
+                        <Card.Body>
+                            <Card.Title>{name}</Card.Title>
+                            <Card.Text>
+                                <p>{desc}</p>
+                                <p>Precio: $ {price}</p>
+                                <p>Marca: {marks}</p>
+                            </Card.Text>
+                            
+                        </Card.Body>
+                    </Card>
+                    </CardGroup>
+                
+            </Row>
         </Container>
+        
     )
 }

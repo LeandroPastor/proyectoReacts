@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { pedirDatos } from '../../helpers/pedirDatos'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router'
 
 
 
@@ -9,22 +10,24 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
 export const ItemDetailContainer = () => {
 
     const [loading, setLoading] = useState(false)
-    const [productos, setProductos] = useState ([])
+    const [productos, setProductos] = useState ()
+    
+    const { productoId } = useParams()
+
+    
     
     useEffect( () => {
 
         setLoading(true)
 
         pedirDatos(true)
-        .then( (response) => {
-            setProductos(response.filter(response => response.id === 1))
-        }) 
-        .catch((error) => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+            .then( response => {
+                setProductos( response.find(prod => prod.id === Number(productoId)))
+            })
+            
+            .finally(() => {
+                setLoading(false)
+            })
     }, [])
 
 
@@ -32,12 +35,10 @@ export const ItemDetailContainer = () => {
     return (
         <>
            {
-            loading ? 
-                <h2>...</h2>
-                : <>
-                    <ItemDetail producto={productos} />
-                </>
-            }  
+            loading
+            ? <h2>...</h2>
+            : <ItemDetail {...productos} />
+           }  
         </>
     )
 }

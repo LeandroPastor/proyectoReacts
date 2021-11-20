@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { NavBar } from './components/NavBar/NavBar';
@@ -7,19 +8,27 @@ import { NavBar } from './components/NavBar/NavBar';
 
 function App() {
   return (
-    
-    <>
-      <NavBar />
-      <ItemListContainer />
-
-      <hr/>
-      <ItemDetailContainer/>
-
       
-    </>  
-    
+      
+      <BrowserRouter>
+
+        <NavBar />
+
+        <Routes>
+          <Route path="/" element={ <ItemListContainer /> }/>
+          <Route path="/productos/categorias/:categoryId" element= { <ItemListContainer /> } />
+          <Route path="/detalle/:productoId" element= { <ItemDetailContainer /> } />
+
+          <Route path="*" element={ <Navigate to="/" /> } />
         
-     
+
+        
+
+        </Routes>    
+      
+      </BrowserRouter>
+
+    
     
   );
 }

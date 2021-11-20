@@ -19,6 +19,8 @@ export const ItemList = ({productos, greeting}) => {
                 {productos.map ((prod) => <Item {...prod}/> )}
             </Row> 
             
+            <hr/>
+
         </Container>
         
     )

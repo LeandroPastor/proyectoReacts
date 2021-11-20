@@ -1,0 +1,9 @@
+.contenedor{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.centrado{
+    align-items: center;
+    justify-content: center;
+}
