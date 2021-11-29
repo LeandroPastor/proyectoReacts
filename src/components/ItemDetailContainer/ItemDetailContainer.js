@@ -28,7 +28,7 @@ export const ItemDetailContainer = () => {
             .finally(() => {
                 setLoading(false)
             })
-    }, [])
+    }, [productoId])
 
 
 

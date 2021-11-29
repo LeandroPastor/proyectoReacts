@@ -17,13 +17,12 @@ export const NavBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto centrado">
-                <Nav.Link ><Link className="home" to="/">Inicio</Link></Nav.Link>    
-                <Nav.Link ><Link className="home" to="productos/categorias">Productos</Link></Nav.Link>    
-                <Nav.Link ><Link className="home" to="productos/categorias/remera">Remeras</Link></Nav.Link>    
-                <Nav.Link ><Link className="home" to="productos/categorias/camisa">Camisas</Link></Nav.Link>    
-                <Nav.Link ><Link className="home" to="productos/categorias/pantalon">Pantalones</Link></Nav.Link>    
-                <Nav.Link ><Link className="home" to="productos/categorias/jean">Jeans</Link></Nav.Link>    
-                <Nav.Link ><Link className="home" to="productos/categorias/short">Shorts</Link></Nav.Link>              
+                <Nav.Link ><Link className="home" to="productos">Shop</Link></Nav.Link>    
+                <Nav.Link ><Link className="home" to="productos/categorias/remeras">Remeras</Link></Nav.Link>    
+                <Nav.Link ><Link className="home" to="productos/categorias/camisas">Camisas</Link></Nav.Link>    
+                <Nav.Link ><Link className="home" to="productos/categorias/pantalones">Pantalones</Link></Nav.Link>    
+                <Nav.Link ><Link className="home" to="productos/categorias/jeans">Jeans</Link></Nav.Link>    
+                <Nav.Link ><Link className="home" to="productos/categorias/shorts">Shorts</Link></Nav.Link>              
                 </Nav>
             </Navbar.Collapse>
             <CartWidget/>

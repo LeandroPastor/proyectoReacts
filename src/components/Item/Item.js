@@ -9,6 +9,8 @@ import './Item.css'
 export const Item = ({id, img, name, desc, price}) => {
    
    
+    
+
     return (
         <article key={id}>
             <CardGroup>
@@ -17,7 +19,6 @@ export const Item = ({id, img, name, desc, price}) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        <p>{desc}</p>
                         <p>Precio: $ {price}</p>
                     </Card.Text>
                     <Link to={`/detalle/${id}`} className="btn btn-secondary">Ver detalle</Link> 

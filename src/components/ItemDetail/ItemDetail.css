@@ -1,9 +1,22 @@
-.contenedor{
+.contItemDetail{
     margin-top: 80px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 
-.centrado{
+.img{
+    max-width: 400px;
+}
+
+.inf{
     align-items: center;
-    justify-content: center;
+    justify-content:space-around; 
+    margin: 50px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inf p {
+    text-align: center;
 }
