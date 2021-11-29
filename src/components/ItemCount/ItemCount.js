@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './ItemCount.css'
 import {MdRemoveCircle} from "react-icons/md";
 import {MdAddCircle} from "react-icons/md";
 
-export const ItemCount = () => {
 
-    const [clicks, setClicks] = useState(0)
+export const ItemCount = ({cant, clicks, setClicks, agregar}) => {
+
+    
 
     const addClicks = () => {
-        clicks >= 10 ? alert("No hay más stock") : setClicks (clicks + 1)
+        clicks >= cant ? alert("No hay más stock") : setClicks (clicks + 1)
     }
 
     const subtractClicks = () => {
@@ -21,11 +22,14 @@ export const ItemCount = () => {
         <>
         <div className="count">
             <MdRemoveCircle onClick={subtractClicks}/>
-            <div>
+            <span className="mx-3">
                 {clicks}                    
-            </div>
+            </span >
             <MdAddCircle onClick={addClicks}/>
         </div>
+        <button className="btn btn-success" onClick={agregar} >
+            Agregar al Carrito
+        </button>
         </>
     )
 }

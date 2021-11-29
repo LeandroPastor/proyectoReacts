@@ -7,6 +7,7 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Wupper Jeans",
         category: "jeans",
+        stock: 12
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Wupper Jeans",
         category: "jeans",
+        stock: 19,
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const products = [
         desc: "Prenda informal para mujer disponible en todos los talles. Confeccionada en lorem ipsum y disponible para envío a todo el país",
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Wupper Jeans",
-        category: "camisas",    
+        category: "camisas",
+        stock: 12,    
     },
     {
         id: 4,
@@ -34,6 +37,7 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Dulce Ironia",
         category: "remeras",
+        stock: 18,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Dulce Ironia",
         category: "pantalones",
+        stock: 5,
     },
     {
         id: 6,
@@ -52,6 +57,7 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Dulce Ironia",
         category: "camisas",
+        stock: 15,
     },
     {
         id: 7,
@@ -61,6 +67,7 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Bora Jeans",
         category: "jeans",
+        stock: 8,
     },
     {
         id: 8,
@@ -70,5 +77,6 @@ export const products = [
         img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/585/963/products/464d48561-31bb0b00a386ca3fd316298290374216-1024-1024.jpg",
         marks: "Bora Jeans",
         category: "pantalones",
+        stock: 10,
     },
 ]

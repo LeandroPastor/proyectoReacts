@@ -1,4 +1,10 @@
-.contItemDetail{
+.contItemDetail {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.itemDetail{
     margin-top: 80px;
     display: flex;
     flex-direction: row;
@@ -10,7 +16,7 @@
 
 .inf{
     align-items: center;
-    justify-content:space-around; 
+    justify-content:space-between; 
     margin: 50px;
     max-width: 500px;
     display: flex;
@@ -19,4 +25,12 @@
 
 .inf p {
     text-align: center;
+}
+
+.btnAtras {
+    margin-top: 70px;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
