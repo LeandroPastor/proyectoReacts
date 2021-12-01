@@ -1,0 +1,15 @@
+.imgCart{
+    max-width: 60px;
+}
+
+.contCartView{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+.removeBot {
+    font-size: 20px;
+    color:red;
+}

@@ -1,18 +1,22 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { Container } from 'react-bootstrap'
 import "./ItemDetail.css"
 import { useNavigate } from 'react-router'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import {CartContext} from '../../context/CartContext'
+
 
 
 
 
 
 export const ItemDetail = ({id, price, name, desc, img, marks, category, stock}) => {
+
+    const {addCart, isInCart} = useContext(CartContext)
     
     const [clicks, setClicks] = useState(0)
-    const [agregado, setAgregado] = useState (false)
+    
 
     const navigate = useNavigate()
 
@@ -23,15 +27,16 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
     const handleAgregar = () => {
 
         if(clicks > 0){
-            console.log('Artículo agregado:', {
+            addCart({
                 id, 
-                name, 
                 price,
-                category,
-                clicks
+                name,
+                img,
+                marks,
+                clicks        
             })
     
-            setAgregado(true)
+            
         } else {
             alert ("Seleccione una cantidad del artículo para finalizar la compra")
         }
@@ -54,15 +59,18 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
                         <hr/>
 
                         {
-                            agregado 
-                            ? <Link to="/carrito" className="btn btn-warning">Terminar compra</Link>
-                            :
+                            !isInCart(id)
+                            ? 
                             <ItemCount 
                             cant={ stock }
                             clicks={clicks}
                             setClicks={setClicks}
                             agregar = { handleAgregar }
                             />
+                            :
+                            <Link to="/carrito" className="btn btn-warning">Terminar compra</Link>
+
+                            
                         }
                                             
                     </div>

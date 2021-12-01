@@ -1,23 +1,33 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter} from 'react-router-dom';
 import { NavBar } from './components/NavBar/NavBar';
+import { CartProvider } from './context/CartContext';
 import { AppRouter } from './router/AppRouter';
 
 
 
 function App() {
+  
+
+  
+
   return (
       
       
-      <BrowserRouter>
+        <CartProvider>
 
-        <NavBar />
+          <BrowserRouter>
 
-        <AppRouter />
+            <NavBar />
 
-      </BrowserRouter>
+            <AppRouter />
 
-    
+          </BrowserRouter>
+
+        </CartProvider>
+        
+
+        
     
   );
 }
