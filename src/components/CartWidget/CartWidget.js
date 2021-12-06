@@ -6,10 +6,10 @@ import './CartWidget.css';
 
 export const CartWidget = () => {
 
-    const {totalCart} = useContext(CartContext)
+    const {totalCart, cart} = useContext(CartContext)
 
     return (
-        <div>
+        <div className={cart.length === 0 ? "ocultar" : " "}>
             <Link to="/carrito"><MdOutlineShoppingCart className="icons"/></Link>
             <span className="total">{totalCart()}</span>
         </div>

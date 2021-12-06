@@ -5,3 +5,8 @@
 .total{
     color: bisque;
 }
+
+.ocultar {
+    visibility: hidden;
+    pointer-events: none;
+}

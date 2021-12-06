@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router'
 import { ItemCount } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
 import {CartContext} from '../../context/CartContext'
+import { InfoCtas } from './InfoCtas'
 
 
 
@@ -48,7 +49,7 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
 
     return (
         <Container className="contItemDetail" >    
-                
+               
                 <div className="itemDetail">
                     <img src={img} alt={name} className="img"/>
                     <div className="inf">
@@ -56,7 +57,11 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
                         <h2>$ {price}</h2>
                         <p>{desc}</p>
                         <h3>{marks}</h3>
+                        
                         <hr/>
+                        
+                        
+
 
                         {
                             !isInCart(id)
@@ -72,8 +77,9 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
 
                             
                         }
-                                            
+                                       
                     </div>
+                    <InfoCtas />
                 </div>
                 
                 <button className="btn btn-secondary btnAtras" onClick={handleAtras}> Atrás </button>        

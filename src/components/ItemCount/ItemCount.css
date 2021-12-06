@@ -5,3 +5,17 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.botRestaM{
+    color: rgb(219, 68, 68);
+}
+
+.botRestaMa{
+    color:rgb(69, 199, 199);
+}
+
+.btnColor{
+    background-color:rgb(69, 199, 199);
+    color: whitesmoke;
+    font-weight: 800;
+}

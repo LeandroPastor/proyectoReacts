@@ -21,7 +21,7 @@ export const CartView = () => {
                     <h2>Mi Carrito</h2>
                     <section>
                         {
-                            cart.map((prod) => <CartItem {...prod}/> )
+                            cart.map((prod) => <CartItem key={prod.id} {...prod}/> )
                         }
                     </section>
                     <hr/>
