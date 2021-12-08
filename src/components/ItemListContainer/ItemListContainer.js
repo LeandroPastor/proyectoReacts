@@ -1,9 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import { ItemList } from '../ItemList/ItemList'
 import { Loader } from '../Loader/Loader'
 import './ItemListContainer.css'
+import { collection, getDocs, query, where} from 'firebase/firestore/lite'
+import { db } from '../../firebase/config'
 
 
 export const ItemListContainer = () => {
@@ -15,26 +16,31 @@ export const ItemListContainer = () => {
     
     
     useEffect( () => {
-
         setLoading(true)
 
-        pedirDatos(true)
-        .then( (response) => {
+        const productosRef = collection(db, 'productos')
 
-            if ( !categoryId ) {
-                setProductos(response)
-                setGreeting("Bienvenida a tu tienda online!!!")
-            } else {
-                setProductos (response.filter ( producto => producto.category === categoryId))                
-                setGreeting(`Bienvenida a la sección de ${categoryId}!!!`)
-            }
-        }) 
-        .catch((error) => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+        const q = categoryId ? query(productosRef, where("category", "==", categoryId) ) : productosRef
+
+        getDocs(q)
+            .then((collection)=>{
+                const items = collection.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }))
+                if (categoryId) {
+                    setProductos(items)
+                    setGreeting(`Bienvenida a la sección de ${categoryId}!!!`)
+                } else {
+                    setProductos(items)
+                    setGreeting("Bienvenida a tu tienda online!!!")
+                }
+                
+            })
+            .finally(()=>{
+                setLoading(false)
+            })
+
     }, [categoryId])
 
 
@@ -53,3 +59,4 @@ export const ItemListContainer = () => {
         </>
     )
 }
+
