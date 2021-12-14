@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export const CartView = () => {
 
-    const {cart, deleteCart} = useContext(CartContext)
+    const {cart, deleteCart, totalCompra} = useContext(CartContext)
     
 
 
@@ -26,8 +26,9 @@ export const CartView = () => {
                     </section>
                     <hr/>
                     <div>
+                        <h3 className='sumaTotal'>Total: ${totalCompra()}</h3>
                         <button className="btn btn-danger" onClick={deleteCart}>Vaciar Carro</button>
-                        <button className="btn btn-success mx-2" >Terminar Compra</button>
+                        <Link to="/checkout" className="btn btn-success mx-2" >Terminar Compra</Link>
                     </div>
                     </>
                 :
