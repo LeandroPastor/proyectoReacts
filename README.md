@@ -15,8 +15,8 @@
 
 <h2>Recursos</h2>
 
-<p>Se utilizaron las siguiente librerías: Bootstrap, Formik y Yup</p>
+<p>Se utilizaron las siguiente librerías: Bootstrap, Formik y Yup.</p>
 <p>El proyecto utiliza Firebase cómo reemplazo de un desarrollo backend. En Firebase se generaron todos los artículos mostrados y se alojaron en firebase storage las imágenes de cada producto. Asimismo las órdenes creadas desde la app, se listan en firebase con su código.</p>
-<p>Queda por desarrollar, desde la app, un espacio de administrador desde el cual poder modificar, crear y consultar artículos</p>
+<p>Queda por desarrollar, desde la app, un espacio de administrador desde el cual poder modificar, crear y consultar artículos.</p>
 
 
