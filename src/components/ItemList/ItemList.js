@@ -8,36 +8,25 @@ export const ItemList = ({productos, greeting}) => {
     
     if (productos.length === 0){
         productos= false
-    }  
-
+    }
     
-
     return (
-
         <Container className="contenedor">
-            
-            
+    
             <h2>{greeting}</h2>
-            
-            
-            
+    
             <hr/>       
                 {
-                    
-                    productos ?
-                    <Row xs={1} md="auto" className="g-4 centrado">
-                        {productos.map ((prod) => <Item {...prod}/> )}
-                    </Row> 
-                    :
-                    <MensajeStock />
-                    
+                    productos
+                        ?
+                        <Row xs={1} md="auto" className="g-4 centrado">
+                            {productos.map ((prod) => <Item {...prod}/> )}
+                        </Row> 
+                        :
+                        <MensajeStock />                    
                 }        
             <hr/>
 
-            
-
-
         </Container>
-        
     )
 }

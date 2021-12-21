@@ -17,8 +17,5 @@ export const AppRouter = () => {
         {path:"/checkout", element: <Checkout /> },
     ])
 
-    return routes  
-
-
-
+    return routes
 }

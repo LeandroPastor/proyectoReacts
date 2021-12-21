@@ -7,8 +7,7 @@ export const CartItem = ({id,name, price, img, clicks}) => {
 
     const {removeCart} = useContext(CartContext)
 
-    return (
-        
+    return (        
         <div className="contCartView mt-2">
             <img src={img} alt={name} className="imgCart"/>
             <h4>{name}</h4>

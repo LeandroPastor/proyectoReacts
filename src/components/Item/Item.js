@@ -3,14 +3,8 @@ import { Card, CardGroup} from 'react-bootstrap'
 import { Link } from "react-router-dom"
 import './Item.css'
 
-
-
-
 export const Item = ({id, img, name, desc, price}) => {
-   
-   
     
-
     return (
         <article key={id}>
             <CardGroup>

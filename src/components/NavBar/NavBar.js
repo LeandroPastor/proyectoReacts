@@ -1,13 +1,10 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
-import { Link } from 'react-router-dom';
-import { CartWidget } from '../CartWidget/CartWidget';
-import './NavBar.css';
+import { Link } from 'react-router-dom'
+import { CartWidget } from '../CartWidget/CartWidget'
+import './NavBar.css'
 
-
-export const NavBar = () => {
-
-    
+export const NavBar = () => {    
     
     return (
         <header>

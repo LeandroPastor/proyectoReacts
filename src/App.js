@@ -4,16 +4,9 @@ import { NavBar } from './components/NavBar/NavBar';
 import { CartProvider } from './context/CartContext';
 import { AppRouter } from './router/AppRouter';
 
-
-
 function App() {
   
-
-  
-
-  return (
-      
-      
+  return (      
         <CartProvider>
 
           <BrowserRouter>
@@ -24,12 +17,8 @@ function App() {
 
           </BrowserRouter>
 
-        </CartProvider>
-        
-
-        
-    
-  );
+        </CartProvider>    
+  )
 }
 
 export default App;

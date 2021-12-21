@@ -3,8 +3,8 @@ import { Spinner, Button } from 'react-bootstrap'
 import './Loader.css'
 
 export const Loader = () => {
-    return (
-        
+    
+    return (        
         <div className="loader">
             <Button variant="success" disabled>
                 <Spinner

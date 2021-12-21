@@ -7,26 +7,15 @@ import { Link } from 'react-router-dom'
 import {CartContext} from '../../context/CartContext'
 import { InfoCtas } from './InfoCtas'
 
-
-
-
-
-
 export const ItemDetail = ({id, price, name, desc, img, marks, category, stock}) => {
 
     const {addCart, isInCart} = useContext(CartContext)
-    
     const [clicks, setClicks] = useState(0)
-    
-
     const navigate = useNavigate()
-
     const handleAtras = () => {
         navigate(-1)
     }
-
     const handleAgregar = () => {
-
         if(clicks > 0){
             addCart({
                 id, 
@@ -36,16 +25,10 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
                 marks,
                 clicks        
             })
-    
-            
         } else {
             alert ("Seleccione una cantidad del artículo para finalizar la compra")
-        }
-
-       
+        }       
     }
-
-
 
     return (
         <Container className="contItemDetail" >    
@@ -59,9 +42,6 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
                         <h3>{marks}</h3>
                         
                         <hr/>
-                        
-                        
-
 
                         {
                             !isInCart(id)
@@ -73,18 +53,13 @@ export const ItemDetail = ({id, price, name, desc, img, marks, category, stock})
                             agregar = { handleAgregar }
                             />
                             :
-                            <Link to="/carrito" className="btn btn-warning">Terminar compra</Link>
-
-                            
+                            <Link to="/carrito" className="btn btn-warning">Comprar</Link>
                         }
-                                       
                     </div>
                     <InfoCtas />
                 </div>
                 
                 <button className="btn btn-secondary btnAtras" onClick={handleAtras}> Atrás </button>        
-            
         </Container>
-        
     )
 }

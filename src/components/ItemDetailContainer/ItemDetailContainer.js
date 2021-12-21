@@ -5,19 +5,12 @@ import { Loader } from '../Loader/Loader'
 import { doc, getDoc} from 'firebase/firestore/lite'
 import { db } from '../../firebase/config'
 
-
-
-
-
 export const ItemDetailContainer = () => {
 
     const [loading, setLoading] = useState(false)
     const [productos, setProductos] = useState ()
-    
     const { productoId } = useParams()
 
-    
-    
     useEffect( () => {
         setLoading(true)
 
@@ -35,8 +28,6 @@ export const ItemDetailContainer = () => {
             })    
 
     }, [productoId])
-
-
 
     return (
         <>

@@ -1,6 +1,6 @@
 
-
 export const btnConfig = (cant, clicks, subtractClicks, addClicks, agregar) => {
+    
     return {
         resta: {
             className: clicks === 0 ? "botRestaM" : "botRestaMa", 
